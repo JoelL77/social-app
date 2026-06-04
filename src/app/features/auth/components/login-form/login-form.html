@@ -4,39 +4,30 @@
     Social App
   </h1>
 
-  <form
-    [formGroup]="loginForm"
-    (ngSubmit)="onSubmit()"
-    class="space-y-4"
-  >
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="space-y-4">
 
     <!-- EMAIL -->
 
     <div>
 
-      <input
-        type="email"
-        placeholder="Email"
-        formControlName="email"
-        class="w-full border rounded-xl p-3"
-      />
+      <input type="email" placeholder="Email" formControlName="email" class="w-full border rounded-xl p-3" autocomplete="email"/>
 
       @if(
-        loginForm.controls.email.touched &&
-        loginForm.controls.email.invalid
+      loginForm.controls.email.touched &&
+      loginForm.controls.email.invalid
       ) {
 
-        <div class="text-red-500 text-sm mt-1">
+      <div class="text-red-500 text-sm mt-1">
 
-          @if(loginForm.controls.email.errors?.['required']) {
-            <p>Email requerido</p>
-          }
+        @if(loginForm.controls.email.errors?.['required']) {
+        <p>Email requerido</p>
+        }
 
-          @if(loginForm.controls.email.errors?.['email']) {
-            <p>Email inválido</p>
-          }
+        @if(loginForm.controls.email.errors?.['email']) {
+        <p>Email inválido</p>
+        }
 
-        </div>
+      </div>
 
       }
 
@@ -46,57 +37,44 @@
 
     <div>
 
-      <input
-        type="password"
-        placeholder="Password"
-        formControlName="password"
-        class="w-full border rounded-xl p-3"
-      />
+      <input type="password" placeholder="Password" formControlName="password" class="w-full border rounded-xl p-3" autocomplete="current-password"/>
 
       @if(
-        loginForm.controls.password.touched &&
-        loginForm.controls.password.invalid
+      loginForm.controls.password.touched &&
+      loginForm.controls.password.invalid
       ) {
 
-        <div class="text-red-500 text-sm mt-1">
+      <div class="text-red-500 text-sm mt-1">
 
-          @if(loginForm.controls.password.errors?.['required']) {
-            <p>Password requerida</p>
-          }
+        @if(loginForm.controls.password.errors?.['required']) {
+        <p>Password requerida</p>
+        }
 
-          @if(loginForm.controls.password.errors?.['minlength']) {
-            <p>Mínimo 6 caracteres</p>
-          }
+        @if(loginForm.controls.password.errors?.['minlength']) {
+        <p>Mínimo 6 caracteres</p>
+        }
 
-        </div>
+      </div>
 
       }
 
     </div>
 
-    <!-- LOGIN -->
-
-    <button
-      type="submit"
-      class="w-full bg-black text-white p-3 rounded-xl cursor-pointer"
-    >
+    
+    <button type="submit" class="w-full bg-black text-white p-3 rounded-xl cursor-pointer">
       Login
     </button>
+    <!-- LOGIN -->
 
   </form>
 
   <!-- GOOGLE LOGIN -->
 
-<button
-  (click)="onGoogleLogin()"
-  class="w-full border p-3 rounded-xl mt-4 flex items-center justify-center gap-2"
->
-  <img
-    src="https://www.svgrepo.com/show/475656/google-color.svg"
-    class="w-5 h-5"
-  />
+  <button (click)="onGoogleLogin()" class="w-full border p-3 rounded-xl mt-4 flex items-center justify-center gap-2">
+    <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" />
 
-  Login con Google
-</button>
+    Login con Google
+  </button>
+  <!-- GOOGLE LOGIN -->
 
 </div>

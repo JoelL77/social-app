@@ -12,8 +12,9 @@ import { Post } from '../../../shared/interfaces/post.interface';
 
 import { Comment } from '../../../shared/interfaces/comment.interface';
 import { MOCK_POSTS } from '../mock/post.mock';
+import { AuthStore } from '../../auth/store/auth.store.service';
 
- 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -22,6 +23,8 @@ export class PostsStore {
   private platformId = inject(PLATFORM_ID);
 
   posts = signal<Post[]>([]);
+
+  authStore = inject(AuthStore)
 
   constructor() {
 
@@ -42,7 +45,7 @@ export class PostsStore {
       effect(() => {
 
         localStorage.setItem(
-          'posts', 
+          'posts',
           JSON.stringify(this.posts())
         );
 
@@ -61,7 +64,7 @@ export class PostsStore {
 
     const newPost: Post = {
       id: crypto.randomUUID(),
-      author: 'Current User',
+      author: this.authStore.user()?.name || 'Current User',
       content,
       likes: 0,
       createdAt: new Date(),
@@ -82,7 +85,7 @@ export class PostsStore {
     const comment: Comment = {
       id: crypto.randomUUID(),
       postId,
-      author: 'Current User',
+      author: this.authStore.user()?.name || 'Current User',
       message,
       createdAt: new Date()
     };

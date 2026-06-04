@@ -85,7 +85,7 @@ Se utiliza Signals Store para gestionar:
 Clonar el repositorio:
 
 ```bash
-git clone <URL_DEL_REPOSITORIO>
+git clone https://github.com/JoelL77/social-app
 ```
 
 Ingresar al proyecto:
@@ -203,3 +203,15 @@ Este flujo genera un usuario mockeado y actualiza el estado global de autenticac
 * No se utiliza base de datos.
 * Prisma no es requerido ya que la aplicación no posee persistencia en servidor.
 * Los datos se mantienen únicamente en LocalStorage.
+
+## Deploy
+
+La aplicación se encuentra desplegada en Vercel:
+
+🔗 https://hroasis-social-app.vercel.app
+
+### Proceso de Deploy
+
+1. Se vinculó el repositorio de GitHub con Vercel.
+2. Cada push a la rama principal genera automáticamente un nuevo despliegue.
+3. Vercel realiza el build y publica la aplicación automáticamente
