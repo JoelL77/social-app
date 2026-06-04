@@ -1,0 +1,2082 @@
+{
+    "pipes": [],
+    "interfaces": [
+        {
+            "name": "Comment",
+            "id": "interface-Comment-ebe62d6f64681b1f76c958aac4145d9cd896dc4a4582fd39351c2fb7e9ac5bb8ebc6155688238dc8cdddf0678d70339b508177c4bc67c8338d5c053e9f443cb3",
+            "file": "src/app/shared/interfaces/comment.interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface Comment {\r\n  id: string;\r\n  postId: string;\r\n  author: string;\r\n  message: string;\r\n  createdAt: Date;\r\n}",
+            "properties": [
+                {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "createdAt",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Date",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "message",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "postId",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "LoginForm",
+            "id": "interface-LoginForm-28fbaa2db7c72f9cc6c32248e8b4170a0ba3859ab1601f5a7c8707556db3cc79a0a60f75bea1dca347d5aacc37f3cc7b999ea77aa8cd9707aa0f72433e2edc6e",
+            "file": "src/app/features/auth/interfaces/login.form.interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface LoginForm {\r\n    email: string;\r\n    password: string;\r\n\r\n}",
+            "properties": [
+                {
+                    "name": "email",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "password",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "Post",
+            "id": "interface-Post-35389ba236bfce54b771d5c04358a8c1c7dc3fed37aa76e60e5b760d8bb05a6ceb7a6caa676115067ad5524d3b14e3cfe1a83d87cd8a3723bfe9ec5d51a527ff",
+            "file": "src/app/shared/interfaces/post.interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "import { Comment } from './comment.interface';\r\n\r\nexport interface Post {\r\n  id: string;\r\n  author: string;\r\n  content: string;\r\n  image?: string;\r\n  likes: number;\r\n  createdAt: Date;\r\n  comments: Comment[];\r\n}",
+            "properties": [
+                {
+                    "name": "author",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "comments",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Comment[]",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 10
+                },
+                {
+                    "name": "content",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 6
+                },
+                {
+                    "name": "createdAt",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Date",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 9
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "image",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 7
+                },
+                {
+                    "name": "likes",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "number",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 8
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        },
+        {
+            "name": "User",
+            "id": "interface-User-b83e2a5ef618bb99397775abb663e0ca7ed183624a1fdb477d0842da0dfe2013ae4fbab13db426a08ab7995ed47e8f5f0d105883e831a34c3a205c770053dc1f",
+            "file": "src/app/features/auth/interfaces/user.interface.ts",
+            "deprecated": false,
+            "deprecationMessage": "",
+            "type": "interface",
+            "sourceCode": "export interface User {\r\n  id: string;\r\n  name: string;\r\n  email: string;\r\n  avatar?: string;\r\n}",
+            "properties": [
+                {
+                    "name": "avatar",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": true,
+                    "description": "",
+                    "line": 5
+                },
+                {
+                    "name": "email",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 4
+                },
+                {
+                    "name": "id",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 2
+                },
+                {
+                    "name": "name",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 3
+                }
+            ],
+            "indexSignatures": [],
+            "kind": 172,
+            "methods": [],
+            "extends": []
+        }
+    ],
+    "injectables": [
+        {
+            "name": "AuthStore",
+            "id": "injectable-AuthStore-424c7e831394d1216f0a875bed67ddd2df603015933b09f10c8e6af23dd696f749d964df1255f9728500d403407678a8e7978e89d4ec8343efc63e3f07056279",
+            "file": "src/app/features/auth/store/auth.store.service.ts",
+            "properties": [
+                {
+                    "name": "isAuthenticated",
+                    "defaultValue": "computed(() => !!this.user())",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23
+                },
+                {
+                    "name": "platformId",
+                    "defaultValue": "inject(PLATFORM_ID)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "user",
+                    "defaultValue": "signal<User | null>(null)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 21
+                }
+            ],
+            "methods": [
+                {
+                    "name": "login",
+                    "args": [
+                        {
+                            "name": "email",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 59,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "email",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "loginWithGoogle",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 71,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "logout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 83,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {\n  computed,\n  effect,\n  inject,\n  Injectable,\n  PLATFORM_ID,\n  signal\n} from '@angular/core';\n\nimport { isPlatformBrowser } from '@angular/common';\n\nimport { User } from '../interfaces/user.interface';\n\n@Injectable({\n  providedIn: 'root'\n})\nexport class AuthStore {\n\n  private platformId = inject(PLATFORM_ID);\n\n  user = signal<User | null>(null);\n\n  isAuthenticated = computed(() => !!this.user());\n\n  constructor() {\n\n    // SOLO EN BROWSER\n\n    if (isPlatformBrowser(this.platformId)) {\n\n      const savedUser = localStorage.getItem('user');\n\n      if (savedUser) {\n        this.user.set(JSON.parse(savedUser));\n      }\n\n      effect(() => {\n\n        const currentUser = this.user();\n\n        if (currentUser) {\n\n          localStorage.setItem(\n            'user',\n            JSON.stringify(currentUser)\n          );\n\n        } else {\n\n          localStorage.removeItem('user');\n\n        }\n\n      });\n\n    }\n  }\n\n  login(email: string) {\n\n    const mockUser: User = {\n      id: crypto.randomUUID(),\n      name: 'Joel User',\n      email,\n      avatar: 'https://i.pravatar.cc/150'\n    };\n\n    this.user.set(mockUser);\n  }\n\n  loginWithGoogle() {\n\n    const mockUser: User = {\n      id: crypto.randomUUID(),\n      name: 'Google User',\n      email: 'google@gmail.com',\n      avatar: 'https://i.pravatar.cc/150'\n    };\n\n    this.user.set(mockUser);\n  }\n\n  logout() {\n\n    this.user.set(null);\n\n    if (isPlatformBrowser(this.platformId)) {\n      localStorage.removeItem('user');\n    }\n  }\n}",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 23
+            },
+            "extends": [],
+            "type": "injectable"
+        },
+        {
+            "name": "PostsStore",
+            "id": "injectable-PostsStore-a26cd25461bca96e35091dedfb5edc40c85e98121f86c51407ffe2344fe115822d3bd3fcf34e077c2ed12eaf1c46f7663f6a75ef6dfaee62b655289ddf1ce10d",
+            "file": "src/app/features/feed/store/posts.store.ts",
+            "properties": [
+                {
+                    "name": "authStore",
+                    "defaultValue": "inject(AuthStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 27
+                },
+                {
+                    "name": "platformId",
+                    "defaultValue": "inject(PLATFORM_ID)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "posts",
+                    "defaultValue": "signal<Post[]>([])",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 25
+                }
+            ],
+            "methods": [
+                {
+                    "name": "addComment",
+                    "args": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 80,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "createPost",
+                    "args": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 63,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "toggleLike",
+                    "args": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 112,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "description": "",
+            "rawdescription": "\n",
+            "sourceCode": "import {\r\n  effect,\r\n  inject,\r\n  Injectable,\r\n  PLATFORM_ID,\r\n  signal\r\n} from '@angular/core';\r\n\r\nimport { isPlatformBrowser } from '@angular/common';\r\n\r\nimport { Post } from '../../../shared/interfaces/post.interface';\r\n\r\nimport { Comment } from '../../../shared/interfaces/comment.interface';\r\nimport { MOCK_POSTS } from '../mock/post.mock';\r\nimport { AuthStore } from '../../auth/store/auth.store.service';\r\n\r\n\r\n@Injectable({\r\n  providedIn: 'root'\r\n})\r\nexport class PostsStore {\r\n\r\n  private platformId = inject(PLATFORM_ID);\r\n\r\n  posts = signal<Post[]>([]);\r\n\r\n  authStore = inject(AuthStore)\r\n\r\n  constructor() {\r\n\r\n    if (isPlatformBrowser(this.platformId)) {\r\n\r\n      const savedPosts = localStorage.getItem('posts');\r\n\r\n      if (savedPosts) {\r\n\r\n        this.posts.set(JSON.parse(savedPosts));\r\n\r\n      } else {\r\n\r\n        this.posts.set(MOCK_POSTS);\r\n\r\n      }\r\n\r\n      effect(() => {\r\n\r\n        localStorage.setItem(\r\n          'posts',\r\n          JSON.stringify(this.posts())\r\n        );\r\n\r\n      });\r\n\r\n    } else {\r\n\r\n      // SSR fallback\r\n\r\n      this.posts.set(MOCK_POSTS);\r\n\r\n    }\r\n  }\r\n\r\n  createPost(content: string) {\r\n\r\n    const newPost: Post = {\r\n      id: crypto.randomUUID(),\r\n      author: this.authStore.user()?.name || 'Current User',\r\n      content,\r\n      likes: 0,\r\n      createdAt: new Date(),\r\n      comments: []\r\n    };\r\n\r\n    this.posts.update(posts => [\r\n      newPost,\r\n      ...posts\r\n    ]);\r\n  }\r\n\r\n  addComment(\r\n    postId: string,\r\n    message: string\r\n  ) {\r\n\r\n    const comment: Comment = {\r\n      id: crypto.randomUUID(),\r\n      postId,\r\n      author: this.authStore.user()?.name || 'Current User',\r\n      message,\r\n      createdAt: new Date()\r\n    };\r\n\r\n    this.posts.update(posts =>\r\n      posts.map(post => {\r\n\r\n        if (post.id === postId) {\r\n\r\n          return {\r\n            ...post,\r\n            comments: [\r\n              ...post.comments,\r\n              comment\r\n            ]\r\n          };\r\n        }\r\n\r\n        return post;\r\n      })\r\n    );\r\n  }\r\n\r\n  toggleLike(postId: string) {\r\n\r\n    this.posts.update(posts =>\r\n      posts.map(post => {\r\n\r\n        if (post.id === postId) {\r\n\r\n          return {\r\n            ...post,\r\n            likes: post.likes + 1\r\n          };\r\n        }\r\n\r\n        return post;\r\n      })\r\n    );\r\n  }\r\n}",
+            "constructorObj": {
+                "name": "constructor",
+                "description": "",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "args": [],
+                "line": 27
+            },
+            "extends": [],
+            "type": "injectable"
+        }
+    ],
+    "guards": [],
+    "interceptors": [],
+    "classes": [],
+    "directives": [],
+    "components": [
+        {
+            "name": "App",
+            "id": "component-App-2c504e2aaddcfb5f19049fce0ba89c9d7d9083699817aaff88ca7197d0204ed7a98b77d2bbfd8d1b762bf05fafa852f8194b4c77f0a18cf8ac10ecae68d03f6c",
+            "file": "src/app/app.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-root",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./app.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "title",
+                    "defaultValue": "signal('social-app')",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 11,
+                    "modifierKind": [
+                        124,
+                        148
+                    ]
+                }
+            ],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "RouterOutlet"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, signal } from '@angular/core';\r\nimport { RouterOutlet } from '@angular/router';\r\n\r\n@Component({\r\n  selector: 'app-root',\r\n  imports: [RouterOutlet],\r\n  templateUrl: './app.html',\r\n  styleUrl: './app.css'\r\n})\r\nexport class App {\r\n  protected readonly title = signal('social-app');\r\n}\r\n",
+            "styleUrl": "./app.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<router-outlet />\r\n"
+        },
+        {
+            "name": "CommentsForm",
+            "id": "component-CommentsForm-19c1334a1d82d0e3a6d6a2da7fbdd24a431842b90d49a2d8bc310910bf773a446a1dde7f1c6ddd62e3a80930b754b5fbaa52146ab901b4be5da14418775b1755",
+            "file": "src/app/features/feed/components/comments-form/comments-form.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-comments-form",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./comments-form.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "post",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Post",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "required": true
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "form",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "FormGroup",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                },
+                {
+                    "name": "postsStore",
+                    "defaultValue": "inject(PostsStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "ngOnInit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 22,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "sendComment",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 29,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject, input, OnInit } from '@angular/core';\nimport { FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';\nimport { Post } from '../../../../shared/interfaces/post.interface';\nimport { PostsStore } from '../../store/posts.store';\n\n@Component({\n  selector: 'app-comments-form',\n  imports: [ReactiveFormsModule],\n  templateUrl: './comments-form.html',\n  styleUrl: './comments-form.css',\n})\nexport class CommentsForm implements OnInit {\n\n\n  form!: FormGroup\n\n  post = input.required<Post>();\n\n  postsStore = inject(PostsStore);\n\n\n  ngOnInit(): void {\n    this.form = new FormGroup({\n      comment: new FormControl(\"\", [Validators.required])\n    })\n\n  }\n\n  sendComment() {\n    const postId = this.post().id;\n\n    const message = this.form.get('comment')?.value;\n\n    this.postsStore.addComment(\n      postId,\n      message\n    );\n\n    this.form.reset();\n  }\n\n\n\n}\n",
+            "styleUrl": "./comments-form.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "implements": [
+                "OnInit"
+            ],
+            "templateData": "<form class=\"w-full flex gap-2 mt-4\" [formGroup]=\"form\" (ngSubmit)=\"sendComment()\">\n    <input formControlName=\"comment\" #commentInput placeholder=\"Agregar comentario...\"\n        class=\"flex-1 border rounded-xl p-2\" />\n\n    <button type=\"submit\" class=\"bg-black text-white px-4 rounded-xl\">\n        Enviar\n    </button>\n</form>"
+        },
+        {
+            "name": "CommentsItem",
+            "id": "component-CommentsItem-4eda9c1a53bf1eec77137f9bf1e0745ce88a07b158cd5e69c7ada11f69d288fc2f4502b8f50847811d1b5d359307e24ec8d051f495f7c1bc13327908ab78b88c",
+            "file": "src/app/features/feed/components/comments-item/comments-item.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-comments-item",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./comments-item.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "comment",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Comment",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13,
+                    "required": true
+                }
+            ],
+            "outputsClass": [],
+            "propertiesClass": [],
+            "methodsClass": [],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, input } from '@angular/core';\nimport { Post } from '../../../../shared/interfaces/post.interface';\nimport { Comment } from '../../../../shared/interfaces/comment.interface';\n\n@Component({\n  selector: 'app-comments-item',\n  imports: [],\n  templateUrl: './comments-item.html',\n  styleUrl: './comments-item.css',\n})\nexport class CommentsItem {\n\n  comment = input.required<Comment>();\n\n}\n",
+            "styleUrl": "./comments-item.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"bg-gray-100 p-2 rounded-lg\">\n\n    <span class=\"font-semibold\">\n        {{ comment().author }}:\n    </span>\n\n    {{ comment().message }}\n\n</div>"
+        },
+        {
+            "name": "CreatePost",
+            "id": "component-CreatePost-f006ea38e825954d2669ee732abc94e899cb7994041ed8d4beb84b923fa8f76b5c5a8014046f7c02f946758df4bf908fedaad738677a03f4af9ff1da898fe98a",
+            "file": "src/app/features/feed/components/create-post/create-post.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-create-post",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./create-post.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "authStore",
+                    "defaultValue": "inject(AuthStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16
+                },
+                {
+                    "name": "postsStore",
+                    "defaultValue": "inject(PostsStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 14
+                },
+                {
+                    "name": "router",
+                    "defaultValue": "inject(Router)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "createPost",
+                    "args": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { PostsStore } from '../../store/posts.store';\nimport { AuthStore } from '../../../auth/store/auth.store.service';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'app-create-post',\n  imports: [],\n  templateUrl: './create-post.html',\n  styleUrl: './create-post.css',\n})\nexport class CreatePost {\n\n  postsStore = inject(PostsStore);\n\n  authStore = inject(AuthStore);\n\n  router = inject(Router);\n\n  createPost(content: string) {\n\n    if (!content.trim()) return;\n\n    this.postsStore.createPost(content);\n  }\n\n\n}\n",
+            "styleUrl": "./create-post.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "    <div class=\"bg-white p-4 rounded-2xl shadow mb-6\">\n\n      <textarea #postInput placeholder=\"¿Qué estás pensando?\" class=\"w-full border rounded-xl p-3\"></textarea>\n\n      <button (click)=\"createPost(postInput.value); postInput.value=''\"\n        class=\"mt-3 bg-black text-white px-4 py-2 rounded-xl text-left\">\n        Publicar\n      </button>\n\n    </div>\n"
+        },
+        {
+            "name": "FeedPage",
+            "id": "component-FeedPage-8ff562bc8e740986a3d3eb2d8ab7f345f4f3536b4d206e2f9d976e5b94942770da41bc0ce474cffcb7578f8e8494817456df15faa861c294a0f11518effbb777",
+            "file": "src/app/features/feed/pages/feed/feed.page.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-feed.page",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./feed.page.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "authStore",
+                    "defaultValue": "inject(AuthStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 22
+                },
+                {
+                    "name": "postsStore",
+                    "defaultValue": "inject(PostsStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 20
+                },
+                {
+                    "name": "router",
+                    "defaultValue": "inject(Router)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 24
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "addComment",
+                    "args": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        },
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 33,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        },
+                        {
+                            "name": "message",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "createPost",
+                    "args": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 26,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "content",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "logout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 46,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "Navbar"
+                },
+                {
+                    "name": "CreatePost"
+                },
+                {
+                    "name": "PostCard"
+                },
+                {
+                    "name": "CommentsItem"
+                },
+                {
+                    "name": "CommentsForm"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { AuthStore } from '../../../auth/store/auth.store.service';\nimport { PostsStore } from '../../store/posts.store';\nimport { Router } from '@angular/router';\nimport { Navbar } from \"../../components/navbar/navbar\";\nimport { CreatePost } from \"../../components/create-post/create-post\";\nimport { PostCard } from \"../../components/post-card/post-card\";\nimport { NgClass } from \"../../../../../../node_modules/@angular/common/types/_common_module-chunk\";\nimport { CommentsItem } from \"../../components/comments-item/comments-item\";\nimport { CommentsForm } from \"../../components/comments-form/comments-form\";\n\n@Component({\n  selector: 'app-feed.page',\n  imports: [Navbar, CreatePost, PostCard, CommentsItem, CommentsForm],\n  templateUrl: './feed.page.html',\n  styleUrl: './feed.page.css',\n})\nexport class FeedPage {\n\n  postsStore = inject(PostsStore);\n\n  authStore = inject(AuthStore);\n\n  router = inject(Router);\n\n  createPost(content: string) {\n\n    if (!content.trim()) return;\n\n    this.postsStore.createPost(content);\n  }\n\n  addComment(\n    postId: string,\n    message: string\n  ) {\n\n    if (!message.trim()) return;\n\n    this.postsStore.addComment(\n      postId,\n      message\n    );\n  }\n\n  logout() {\n\n    this.authStore.logout();\n\n    this.router.navigate(['/']);\n  }\n\n}\n",
+            "styleUrl": "./feed.page.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"min-h-screen bg-gray-100\">\n\n  <div class=\"max-w-2xl mx-auto p-4\">\n\n    <!-- NAVBAR -->\n    <app-navbar class=\"flex justify-between items-center mb-6\"></app-navbar>\n    <!-- NAVBAR -->\n\n    <!-- CREATE POST -->\n    <app-create-post></app-create-post>\n    <!-- CREATE POST -->\n\n    <div class=\"space-y-4\">\n\n      @for(post of postsStore.posts(); track post.id) {\n\n      <div class=\"bg-white p-4 rounded-2xl shadow\">\n\n        <!-- POSTS -->\n        <app-post-card (eventToggleLike)=\"postsStore.toggleLike($event)\" [post]=\"post\"></app-post-card>\n        <!-- POSTS -->\n\n        <!-- COMMENTS -->\n        <div class=\"space-y-2\">\n          @for(comment of post.comments; track comment.id) {\n          <app-comments-item [comment]=\"comment\"></app-comments-item>\n          }\n        </div>\n        <!-- COMMENTS -->\n\n        <!-- ADD COMMENT -->\n        <app-comments-form class=\"flex gap-2 mt-4\" [post]=\"post\"></app-comments-form>\n        <!-- ADD COMMENT -->\n      </div>\n      }\n    </div>\n\n  </div>\n\n</div>"
+        },
+        {
+            "name": "Login",
+            "id": "component-Login-eb5f1a16c39975fd757b7dc6dc78a0c2aaa86a586e52ed7efd01e2d61015fbbae40f4fb0f032ba15a060e7d5ea698acf30ef6b2fbc8127ffd9cc8b7371409498",
+            "file": "src/app/features/auth/pages/login/login.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-login-page",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./login.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "authStore",
+                    "defaultValue": "inject(AuthStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 17,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "router",
+                    "defaultValue": "inject(Router)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 19,
+                    "modifierKind": [
+                        123
+                    ]
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "login",
+                    "args": [
+                        {
+                            "name": "data",
+                            "type": "literal type",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 21,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "data",
+                            "type": "literal type",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "loginWithGoogle",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 28,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "LoginFormComponent",
+                    "type": "component"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\n\nimport { Router } from '@angular/router';\n\n\nimport { LoginFormComponent } from '../../components/login-form/login-form';\nimport { AuthStore } from '../../store/auth.store.service';\n\n@Component({\n  selector: 'app-login-page',\n  standalone: true,\n  imports: [LoginFormComponent],\n  templateUrl: './login.html'\n})\nexport class Login {\n\n  private authStore = inject(AuthStore);\n\n  private router = inject(Router);\n\n  login(data: { email: string; password: string }) {\n\n    this.authStore.login(data.email);\n\n    this.router.navigate(['/feed']);\n  }\n\n  loginWithGoogle() {\n\n    this.authStore.loginWithGoogle();\n\n    this.router.navigate(['/feed']);\n  }\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"min-h-screen flex items-center justify-center bg-gray-100 p-4\">\n    <app-login-form (submitLogin)=\"login($event)\" (googleLogin)=\"loginWithGoogle()\" />\n</div>"
+        },
+        {
+            "name": "LoginFormComponent",
+            "id": "component-LoginFormComponent-fc80117f3a0f5dbc0ec795b2aea6ddd93f1b45bd75df7f54590fcceea7b00ed922905cc334e83aca0087b1e2ec072f49c5eb7f67564dfbb5fbaa86abe6710d0a",
+            "file": "src/app/features/auth/components/login-form/login-form.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-login-form",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./login-form.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [
+                {
+                    "name": "googleLogin",
+                    "defaultValue": "new EventEmitter<void>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 27,
+                    "type": "EventEmitter"
+                },
+                {
+                    "name": "submitLogin",
+                    "defaultValue": "new EventEmitter<LoginForm>()",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "line": 25,
+                    "type": "EventEmitter"
+                }
+            ],
+            "propertiesClass": [
+                {
+                    "name": "fb",
+                    "defaultValue": "inject(FormBuilder)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 23,
+                    "modifierKind": [
+                        123
+                    ]
+                },
+                {
+                    "name": "loginForm",
+                    "defaultValue": "this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.minLength(6)\n      ]\n    ]\n  })",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 30
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "onGoogleLogin",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 60,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                },
+                {
+                    "name": "onSubmit",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 47,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": true,
+            "imports": [
+                {
+                    "name": "ReactiveFormsModule",
+                    "type": "module"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import {\n  Component,\n  EventEmitter,\n  inject,\n  Output\n} from '@angular/core';\n\nimport {\n  FormBuilder,\n  ReactiveFormsModule,\n  Validators\n} from '@angular/forms';\nimport { LoginForm } from '../../interfaces/login.form.interface';\n\n@Component({\n  selector: 'app-login-form',\n  standalone: true,\n  imports: [ReactiveFormsModule],\n  templateUrl: './login-form.html'\n})\nexport class LoginFormComponent {\n\n  private fb = inject(FormBuilder);\n\n  @Output() submitLogin = new EventEmitter<LoginForm>();\n\n  @Output() googleLogin = new EventEmitter<void>();\n\n\n  loginForm = this.fb.group({\n    email: [\n      '',\n      [\n        Validators.required,\n        Validators.email\n      ]\n    ],\n    password: [\n      '',\n      [\n        Validators.required,\n        Validators.minLength(6)\n      ]\n    ]\n  });\n\n  onSubmit() {\n\n    if (this.loginForm.invalid) {\n      this.loginForm.markAllAsTouched();\n      return;\n    }\n\n    this.submitLogin.emit({\n      email: this.loginForm.value.email!,\n      password: this.loginForm.value.password!\n    });\n  }\n\n  onGoogleLogin() {\n    this.googleLogin.emit();\n  }\n}",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"w-full max-w-md bg-white p-8 rounded-2xl shadow-lg\">\n\n  <h1 class=\"text-3xl font-bold text-center mb-6\">\n    Social App\n  </h1>\n\n  <form [formGroup]=\"loginForm\" (ngSubmit)=\"onSubmit()\" class=\"space-y-4\">\n\n    <!-- EMAIL -->\n\n    <div>\n\n      <input type=\"email\" placeholder=\"Email\" formControlName=\"email\" class=\"w-full border rounded-xl p-3\" autocomplete=\"email\"/>\n\n      @if(\n      loginForm.controls.email.touched &&\n      loginForm.controls.email.invalid\n      ) {\n\n      <div class=\"text-red-500 text-sm mt-1\">\n\n        @if(loginForm.controls.email.errors?.['required']) {\n        <p>Email requerido</p>\n        }\n\n        @if(loginForm.controls.email.errors?.['email']) {\n        <p>Email inválido</p>\n        }\n\n      </div>\n\n      }\n\n    </div>\n\n    <!-- PASSWORD -->\n\n    <div>\n\n      <input type=\"password\" placeholder=\"Password\" formControlName=\"password\" class=\"w-full border rounded-xl p-3\" autocomplete=\"current-password\"/>\n\n      @if(\n      loginForm.controls.password.touched &&\n      loginForm.controls.password.invalid\n      ) {\n\n      <div class=\"text-red-500 text-sm mt-1\">\n\n        @if(loginForm.controls.password.errors?.['required']) {\n        <p>Password requerida</p>\n        }\n\n        @if(loginForm.controls.password.errors?.['minlength']) {\n        <p>Mínimo 6 caracteres</p>\n        }\n\n      </div>\n\n      }\n\n    </div>\n\n    \n    <button type=\"submit\" class=\"w-full bg-black text-white p-3 rounded-xl cursor-pointer\">\n      Login\n    </button>\n    <!-- LOGIN -->\n\n  </form>\n\n  <!-- GOOGLE LOGIN -->\n\n  <button (click)=\"onGoogleLogin()\" class=\"w-full border p-3 rounded-xl mt-4 flex items-center justify-center gap-2\">\n    <img alt=\"Google\" src=\"https://www.svgrepo.com/show/475656/google-color.svg\" class=\"w-5 h-5\" />\n\n    Login con Google\n  </button>\n  <!-- GOOGLE LOGIN -->\n\n</div>"
+        },
+        {
+            "name": "Navbar",
+            "id": "component-Navbar-10b2cd39f281588ba52e8733ad09b900ab66bb0f48cc183e9a5cbd0d2775a3f489ae0783a498caf74879882404ae023386b6cfbb80e758c7061ccd77cada7827",
+            "file": "src/app/features/feed/components/navbar/navbar.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-navbar",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./navbar.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [],
+            "outputsClass": [],
+            "propertiesClass": [
+                {
+                    "name": "authStore",
+                    "defaultValue": "inject(AuthStore)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 13
+                },
+                {
+                    "name": "router",
+                    "defaultValue": "inject(Router)",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 15
+                }
+            ],
+            "methodsClass": [
+                {
+                    "name": "logout",
+                    "args": [],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 17,
+                    "deprecated": false,
+                    "deprecationMessage": ""
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject } from '@angular/core';\nimport { AuthStore } from '../../../auth/store/auth.store.service';\nimport { Router } from '@angular/router';\n\n@Component({\n  selector: 'app-navbar',\n  imports: [],\n  templateUrl: './navbar.html',\n  styleUrl: './navbar.css',\n})\nexport class Navbar {\n\n  authStore = inject(AuthStore);\n\n  router = inject(Router);\n\n  logout() {\n\n    this.authStore.logout();\n\n    this.router.navigate(['/']);\n  }\n\n\n}\n",
+            "styleUrl": "./navbar.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<h1 class=\"text-3xl font-bold\">\n    Social Feed\n</h1>\n\n<button (click)=\"logout()\" class=\"bg-red-500 text-white px-4 py-2 rounded-xl\">\n    Logout\n</button>"
+        },
+        {
+            "name": "PostCard",
+            "id": "component-PostCard-e736c4ac064b24ab8eca0019a9a2e05b708ac9dfee2456de8e5a5589623d22825547de60628126ce65d309c13e31727488e3b6e9ffb4133507408d14a67b0f87",
+            "file": "src/app/features/feed/components/post-card/post-card.ts",
+            "encapsulation": [],
+            "entryComponents": [],
+            "inputs": [],
+            "outputs": [],
+            "providers": [],
+            "selector": "app-post-card",
+            "styleUrls": [],
+            "styles": [],
+            "templateUrl": [
+                "./post-card.html"
+            ],
+            "viewProviders": [],
+            "hostDirectives": [],
+            "inputsClass": [
+                {
+                    "name": "post",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Post",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 16,
+                    "required": true
+                }
+            ],
+            "outputsClass": [
+                {
+                    "name": "eventToggleLike",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "string",
+                    "indexKey": "",
+                    "optional": false,
+                    "description": "",
+                    "line": 18,
+                    "required": false
+                }
+            ],
+            "propertiesClass": [],
+            "methodsClass": [
+                {
+                    "name": "toggleLike",
+                    "args": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": ""
+                        }
+                    ],
+                    "optional": false,
+                    "returnType": "void",
+                    "typeParameters": [],
+                    "line": 20,
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "jsdoctags": [
+                        {
+                            "name": "postId",
+                            "type": "string",
+                            "optional": false,
+                            "dotDotDotToken": false,
+                            "deprecated": false,
+                            "deprecationMessage": "",
+                            "tagName": {
+                                "text": "param"
+                            }
+                        }
+                    ]
+                }
+            ],
+            "deprecated": false,
+            "deprecationMessage": "",
+            "hostBindings": [],
+            "hostListeners": [],
+            "standalone": false,
+            "imports": [
+                {
+                    "name": "DatePipe",
+                    "type": "pipe"
+                }
+            ],
+            "description": "",
+            "rawdescription": "\n",
+            "type": "component",
+            "sourceCode": "import { Component, inject, input, output } from '@angular/core';\nimport { PostsStore } from '../../store/posts.store';\nimport { AuthStore } from '../../../auth/store/auth.store.service';\nimport { Router } from '@angular/router';\nimport { Post } from '../../../../shared/interfaces/post.interface';\nimport { DatePipe } from '@angular/common';\n\n@Component({\n  selector: 'app-post-card',\n  imports: [DatePipe],\n  templateUrl: './post-card.html',\n  styleUrl: './post-card.css',\n})\nexport class PostCard {\n\n  post = input.required<Post>();\n\n  eventToggleLike = output<string>();\n\n  toggleLike(postId: string) {\n    this.eventToggleLike.emit(postId)\n  }\n\n}\n",
+            "styleUrl": "./post-card.css",
+            "assetsDirs": [],
+            "styleUrlsData": "",
+            "stylesData": "",
+            "extends": [],
+            "templateData": "<div class=\"flex items-center gap-3 mb-3\">\n\n    <img src=\"https://i.pravatar.cc/40\" class=\"w-10 h-10 rounded-full\" />\n\n    <div>\n        <p class=\"font-bold\">\n            {{ post().author }}\n        </p>\n\n        <p class=\"text-sm text-gray-500\">\n            {{ post().createdAt | date : 'dd/MM/yyyy h:mm a'}}\n        </p>\n        <div class=\"flex gap-4 mb-4\">\n            <button (click)=\"toggleLike(post().id)\">\n                ❤️ {{ post().likes }}\n            </button>\n        </div>\n    </div>\n\n</div>\n\n<p class=\"mb-4\">\n    {{ post().content }}\n</p>"
+        }
+    ],
+    "modules": [],
+    "miscellaneous": {
+        "variables": [
+            {
+                "name": "angularApp",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "new AngularNodeAppEngine()"
+            },
+            {
+                "name": "app",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "express()"
+            },
+            {
+                "name": "appConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes), provideClientHydration(withEventReplay())\r\n  ]\r\n}"
+            },
+            {
+                "name": "authGuard",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/features/auth/guards/auth-guard.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "CanActivateFn",
+                "defaultValue": "() => {\n\n\n  const platformId = inject(PLATFORM_ID);\n  const authStore = inject(AuthStore);\n  const router = inject(Router);\n\n  if (!isPlatformBrowser(platformId)) {\n    return true;\n  }\n\n  return authStore.isAuthenticated()\n    ? true\n    : router.createUrlTree(['/']);\n}"
+            },
+            {
+                "name": "AuthRoutes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/features/auth/auth.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Routes",
+                "defaultValue": "[\r\n    {\r\n        path: '',\r\n        children: [\r\n            {\r\n                path: '',\r\n                loadComponent: () =>\r\n                    \"import('./pages/login/login')\\r\\n\\\n                        .then(l => l.Login)\",\r\n            },\r\n            {\r\n                path: 'login',\r\n                loadComponent: () =>\r\n                    \"import('./pages/login/login')\\r\\n\\\n                        .then(l => l.Login)\",\r\n            },\r\n            {\r\n                path: '**',\r\n                redirectTo: 'login'\r\n            }\r\n        ],\r\n    }\r\n]"
+            },
+            {
+                "name": "bootstrap",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/main.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "(context: BootstrapContext) =>\r\n    bootstrapApplication(App, config, context)"
+            },
+            {
+                "name": "browserDistFolder",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "join(import.meta.dirname, '../browser')"
+            },
+            {
+                "name": "config",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+            },
+            {
+                "name": "MOCK_POSTS",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/features/feed/mock/post.mock.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Post[]",
+                "defaultValue": "[\r\n  {\r\n    id: crypto.randomUUID(),\r\n    author: 'Joel',\r\n    content: 'Mi primer post en Angular SSR 🚀',\r\n    likes: 12,\r\n    createdAt: new Date(),\r\n    comments: []\r\n  },\r\n  {\r\n    id: crypto.randomUUID(),\r\n    author: 'Ana',\r\n    content: 'Signals son increíbles 🔥',\r\n    likes: 5,\r\n    createdAt: new Date(),\r\n    comments: []\r\n  }\r\n]"
+            },
+            {
+                "name": "reqHandler",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "unknown",
+                "defaultValue": "createNodeRequestHandler(app)",
+                "rawdescription": "Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.",
+                "description": "<p>Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.</p>\n"
+            },
+            {
+                "name": "routes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Routes",
+                "defaultValue": "[\r\n    {\r\n        path: 'auth',\r\n        loadChildren: () =>\r\n            \"import('./features/auth/auth.routes')\\r\\n\\\n                .then(a => a.AuthRoutes)\"\r\n    },\r\n    {\r\n        path: 'feed',\r\n        canActivate: [authGuard],\r\n        loadChildren: () =>\r\n            \"import('./features/feed/feed.routes')\\r\\n\\\n                .then(f => f.routes)\"\r\n    },\r\n    {\r\n        path: '**',\r\n        redirectTo: 'auth'\r\n    }\r\n\r\n]"
+            },
+            {
+                "name": "routes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/features/feed/feed.routes.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "Routes",
+                "defaultValue": "[\r\n    {\r\n        path: '',\r\n        children: [\r\n            {\r\n                path : '',\r\n                loadComponent: () =>\r\n                    \"import('./pages/feed/feed.page')\\r\\n\\\n                        .then(f => f.FeedPage)\",\r\n                canActivate: [authGuard],\r\n            },\r\n            {\r\n                path : 'feed',\r\n                loadComponent: () =>\r\n                    \"import('./pages/feed/feed.page')\\r\\n\\\n                        .then(f => f.FeedPage)\",\r\n                canActivate: [authGuard],\r\n            },\r\n            {\r\n                path: '**',\r\n                redirectTo: 'feed'\r\n            }\r\n        ],\r\n    }\r\n]"
+            },
+            {
+                "name": "serverConfig",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.config.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ApplicationConfig",
+                "defaultValue": "{\r\n  providers: [\r\n    provideServerRendering(withRoutes(serverRoutes))\r\n  ]\r\n}"
+            },
+            {
+                "name": "serverRoutes",
+                "ctype": "miscellaneous",
+                "subtype": "variable",
+                "file": "src/app/app.routes.server.ts",
+                "deprecated": false,
+                "deprecationMessage": "",
+                "type": "ServerRoute[]",
+                "defaultValue": "[\r\n  {\r\n    path: '**',\r\n    renderMode: RenderMode.Server\r\n  }\r\n]"
+            }
+        ],
+        "functions": [],
+        "typealiases": [],
+        "enumerations": [],
+        "groupedVariables": {
+            "src/server.ts": [
+                {
+                    "name": "angularApp",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "new AngularNodeAppEngine()"
+                },
+                {
+                    "name": "app",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "express()"
+                },
+                {
+                    "name": "browserDistFolder",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "join(import.meta.dirname, '../browser')"
+                },
+                {
+                    "name": "reqHandler",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "createNodeRequestHandler(app)",
+                    "rawdescription": "Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.",
+                    "description": "<p>Request handler used by the Angular CLI (for dev-server and during build) or Firebase Cloud Functions.</p>\n"
+                }
+            ],
+            "src/app/app.config.ts": [
+                {
+                    "name": "appConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [\r\n    provideBrowserGlobalErrorListeners(),\r\n    provideRouter(routes), provideClientHydration(withEventReplay())\r\n  ]\r\n}"
+                }
+            ],
+            "src/app/features/auth/guards/auth-guard.ts": [
+                {
+                    "name": "authGuard",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/features/auth/guards/auth-guard.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "CanActivateFn",
+                    "defaultValue": "() => {\n\n\n  const platformId = inject(PLATFORM_ID);\n  const authStore = inject(AuthStore);\n  const router = inject(Router);\n\n  if (!isPlatformBrowser(platformId)) {\n    return true;\n  }\n\n  return authStore.isAuthenticated()\n    ? true\n    : router.createUrlTree(['/']);\n}"
+                }
+            ],
+            "src/app/features/auth/auth.routes.ts": [
+                {
+                    "name": "AuthRoutes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/features/auth/auth.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Routes",
+                    "defaultValue": "[\r\n    {\r\n        path: '',\r\n        children: [\r\n            {\r\n                path: '',\r\n                loadComponent: () =>\r\n                    \"import('./pages/login/login')\\r\\n\\\n                        .then(l => l.Login)\",\r\n            },\r\n            {\r\n                path: 'login',\r\n                loadComponent: () =>\r\n                    \"import('./pages/login/login')\\r\\n\\\n                        .then(l => l.Login)\",\r\n            },\r\n            {\r\n                path: '**',\r\n                redirectTo: 'login'\r\n            }\r\n        ],\r\n    }\r\n]"
+                }
+            ],
+            "src/main.server.ts": [
+                {
+                    "name": "bootstrap",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/main.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "(context: BootstrapContext) =>\r\n    bootstrapApplication(App, config, context)"
+                }
+            ],
+            "src/app/app.config.server.ts": [
+                {
+                    "name": "config",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "unknown",
+                    "defaultValue": "mergeApplicationConfig(appConfig, serverConfig)"
+                },
+                {
+                    "name": "serverConfig",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.config.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ApplicationConfig",
+                    "defaultValue": "{\r\n  providers: [\r\n    provideServerRendering(withRoutes(serverRoutes))\r\n  ]\r\n}"
+                }
+            ],
+            "src/app/features/feed/mock/post.mock.ts": [
+                {
+                    "name": "MOCK_POSTS",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/features/feed/mock/post.mock.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Post[]",
+                    "defaultValue": "[\r\n  {\r\n    id: crypto.randomUUID(),\r\n    author: 'Joel',\r\n    content: 'Mi primer post en Angular SSR 🚀',\r\n    likes: 12,\r\n    createdAt: new Date(),\r\n    comments: []\r\n  },\r\n  {\r\n    id: crypto.randomUUID(),\r\n    author: 'Ana',\r\n    content: 'Signals son increíbles 🔥',\r\n    likes: 5,\r\n    createdAt: new Date(),\r\n    comments: []\r\n  }\r\n]"
+                }
+            ],
+            "src/app/app.routes.ts": [
+                {
+                    "name": "routes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Routes",
+                    "defaultValue": "[\r\n    {\r\n        path: 'auth',\r\n        loadChildren: () =>\r\n            \"import('./features/auth/auth.routes')\\r\\n\\\n                .then(a => a.AuthRoutes)\"\r\n    },\r\n    {\r\n        path: 'feed',\r\n        canActivate: [authGuard],\r\n        loadChildren: () =>\r\n            \"import('./features/feed/feed.routes')\\r\\n\\\n                .then(f => f.routes)\"\r\n    },\r\n    {\r\n        path: '**',\r\n        redirectTo: 'auth'\r\n    }\r\n\r\n]"
+                }
+            ],
+            "src/app/features/feed/feed.routes.ts": [
+                {
+                    "name": "routes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/features/feed/feed.routes.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "Routes",
+                    "defaultValue": "[\r\n    {\r\n        path: '',\r\n        children: [\r\n            {\r\n                path : '',\r\n                loadComponent: () =>\r\n                    \"import('./pages/feed/feed.page')\\r\\n\\\n                        .then(f => f.FeedPage)\",\r\n                canActivate: [authGuard],\r\n            },\r\n            {\r\n                path : 'feed',\r\n                loadComponent: () =>\r\n                    \"import('./pages/feed/feed.page')\\r\\n\\\n                        .then(f => f.FeedPage)\",\r\n                canActivate: [authGuard],\r\n            },\r\n            {\r\n                path: '**',\r\n                redirectTo: 'feed'\r\n            }\r\n        ],\r\n    }\r\n]"
+                }
+            ],
+            "src/app/app.routes.server.ts": [
+                {
+                    "name": "serverRoutes",
+                    "ctype": "miscellaneous",
+                    "subtype": "variable",
+                    "file": "src/app/app.routes.server.ts",
+                    "deprecated": false,
+                    "deprecationMessage": "",
+                    "type": "ServerRoute[]",
+                    "defaultValue": "[\r\n  {\r\n    path: '**',\r\n    renderMode: RenderMode.Server\r\n  }\r\n]"
+                }
+            ]
+        },
+        "groupedFunctions": {},
+        "groupedEnumerations": {},
+        "groupedTypeAliases": {}
+    },
+    "routes": {
+        "name": "<root>",
+        "kind": "module",
+        "children": [
+            {
+                "name": "login",
+                "kind": "route-path",
+                "filename": "src/app/features/auth/auth.routes.ts"
+            },
+            {
+                "name": "**",
+                "kind": "route-path",
+                "filename": "src/app/features/auth/auth.routes.ts"
+            },
+            {
+                "name": "login",
+                "kind": "route-redirect",
+                "filename": "src/app/features/auth/auth.routes.ts"
+            },
+            {
+                "name": "auth",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "feed",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "**",
+                "kind": "route-path",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "auth",
+                "kind": "route-redirect",
+                "filename": "src/app/app.routes.ts"
+            },
+            {
+                "name": "feed",
+                "kind": "route-path",
+                "filename": "src/app/features/feed/feed.routes.ts"
+            },
+            {
+                "name": "**",
+                "kind": "route-path",
+                "filename": "src/app/features/feed/feed.routes.ts"
+            },
+            {
+                "name": "feed",
+                "kind": "route-redirect",
+                "filename": "src/app/features/feed/feed.routes.ts"
+            }
+        ]
+    },
+    "coverage": {
+        "count": 3,
+        "status": "low",
+        "files": [
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "config",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.config.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "appConfig",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.routes.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "serverRoutes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "routes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/app.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "App",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/auth.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "AuthRoutes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/components/login-form/login-form.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "LoginFormComponent",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/guards/auth-guard.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "authGuard",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/interfaces/login.form.interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "LoginForm",
+                "coveragePercent": 0,
+                "coverageCount": "0/3",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/interfaces/user.interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "User",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/pages/login/login.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Login",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/auth/store/auth.store.service.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "AuthStore",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/components/comments-form/comments-form.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CommentsForm",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/components/comments-item/comments-item.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CommentsItem",
+                "coveragePercent": 0,
+                "coverageCount": "0/2",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/components/create-post/create-post.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "CreatePost",
+                "coveragePercent": 0,
+                "coverageCount": "0/5",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/components/navbar/navbar.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "Navbar",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/components/post-card/post-card.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "PostCard",
+                "coveragePercent": 0,
+                "coverageCount": "0/4",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/feed.routes.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "routes",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/mock/post.mock.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "MOCK_POSTS",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/pages/feed/feed.page.ts",
+                "type": "component",
+                "linktype": "component",
+                "name": "FeedPage",
+                "coveragePercent": 0,
+                "coverageCount": "0/7",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/features/feed/store/posts.store.ts",
+                "type": "injectable",
+                "linktype": "injectable",
+                "name": "PostsStore",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/comment.interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Comment",
+                "coveragePercent": 0,
+                "coverageCount": "0/6",
+                "status": "low"
+            },
+            {
+                "filePath": "src/app/shared/interfaces/post.interface.ts",
+                "type": "interface",
+                "linktype": "interface",
+                "name": "Post",
+                "coveragePercent": 0,
+                "coverageCount": "0/8",
+                "status": "low"
+            },
+            {
+                "filePath": "src/main.server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "bootstrap",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "angularApp",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "app",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "browserDistFolder",
+                "coveragePercent": 0,
+                "coverageCount": "0/1",
+                "status": "low"
+            },
+            {
+                "filePath": "src/server.ts",
+                "type": "variable",
+                "linktype": "miscellaneous",
+                "linksubtype": "variable",
+                "name": "reqHandler",
+                "coveragePercent": 100,
+                "coverageCount": "1/1",
+                "status": "very-good"
+            }
+        ]
+    }
+}

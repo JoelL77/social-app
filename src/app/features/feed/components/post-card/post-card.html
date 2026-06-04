@@ -8,8 +8,13 @@
         </p>
 
         <p class="text-sm text-gray-500">
-            {{ post().createdAt }}
+            {{ post().createdAt | date : 'dd/MM/yyyy h:mm a'}}
         </p>
+        <div class="flex gap-4 mb-4">
+            <button (click)="toggleLike(post().id)">
+                ❤️ {{ post().likes }}
+            </button>
+        </div>
     </div>
 
 </div>
@@ -17,4 +22,3 @@
 <p class="mb-4">
     {{ post().content }}
 </p>
-

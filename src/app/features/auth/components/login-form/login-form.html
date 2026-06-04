@@ -10,7 +10,8 @@
 
     <div>
 
-      <input type="email" placeholder="Email" formControlName="email" class="w-full border rounded-xl p-3" autocomplete="email"/>
+      <input type="email" placeholder="Email" formControlName="email" class="w-full border rounded-xl p-3"
+        autocomplete="email" />
 
       @if(
       loginForm.controls.email.touched &&
@@ -37,7 +38,8 @@
 
     <div>
 
-      <input type="password" placeholder="Password" formControlName="password" class="w-full border rounded-xl p-3" autocomplete="current-password"/>
+      <input type="password" placeholder="Password" formControlName="password" class="w-full border rounded-xl p-3"
+        autocomplete="current-password" />
 
       @if(
       loginForm.controls.password.touched &&
@@ -60,9 +62,18 @@
 
     </div>
 
-    
-    <button type="submit" class="w-full bg-black text-white p-3 rounded-xl cursor-pointer">
-      Login
+
+    <button [disabled]="isLoading() || isGoogleLoading() || loginForm.invalid" type="submit"
+      class="w-full bg-black text-white p-3 rounded-xl cursor-pointer">
+      @if(isLoading()) {
+
+      <span>Iniciando sesión...</span>
+
+      } @else {
+
+      <span>Login</span>
+
+      }
     </button>
     <!-- LOGIN -->
 
@@ -70,10 +81,14 @@
 
   <!-- GOOGLE LOGIN -->
 
-  <button (click)="onGoogleLogin()" class="w-full border p-3 rounded-xl mt-4 flex items-center justify-center gap-2">
-    <img src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" />
-
-    Login con Google
+  <button [disabled]="isLoading() || isGoogleLoading() || loginForm.invalid" (click)="onGoogleLogin()"
+    class="w-full border p-3 rounded-xl mt-4 flex items-center justify-center gap-2 cursor-pointer">
+    @if(isGoogleLoading()) {
+    <span>Conectando con Google...</span>
+    } @else {
+      <span>Iniciar sesión con</span>
+    <img alt="Google login" src="https://www.svgrepo.com/show/475656/google-color.svg" class="w-5 h-5" />
+    }
   </button>
   <!-- GOOGLE LOGIN -->
 

@@ -4,7 +4,7 @@ export const MOCK_POSTS: Post[] = [
   {
     id: crypto.randomUUID(),
     author: 'Joel',
-    content: 'Mi primer post en Angular SSR 🚀',
+    content: 'Mi primer post en Angular SSR',
     likes: 12,
     createdAt: new Date(),
     comments: []
@@ -12,7 +12,7 @@ export const MOCK_POSTS: Post[] = [
   {
     id: crypto.randomUUID(),
     author: 'Ana',
-    content: 'Signals son increíbles 🔥',
+    content: 'Signals son increíbles',
     likes: 5,
     createdAt: new Date(),
     comments: []

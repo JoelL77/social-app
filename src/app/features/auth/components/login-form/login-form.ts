@@ -2,7 +2,8 @@ import {
   Component,
   EventEmitter,
   inject,
-  Output
+  Output,
+  signal
 } from '@angular/core';
 
 import {
@@ -25,6 +26,10 @@ export class LoginFormComponent {
   @Output() submitLogin = new EventEmitter<LoginForm>();
 
   @Output() googleLogin = new EventEmitter<void>();
+
+  
+  isLoading = signal(false);
+  isGoogleLoading = signal(false);
 
 
   loginForm = this.fb.group({
@@ -51,13 +56,32 @@ export class LoginFormComponent {
       return;
     }
 
-    this.submitLogin.emit({
-      email: this.loginForm.value.email!,
-      password: this.loginForm.value.password!
-    });
+    this.isLoading.set(true);
+
+    setTimeout(() => {
+
+      this.submitLogin.emit({
+        email: this.loginForm.value.email!,
+        password: this.loginForm.value.password!
+      });
+
+      this.isLoading.set(false);
+
+    }, 800)
+
+
+
   }
 
   onGoogleLogin() {
-    this.googleLogin.emit();
+    this.isGoogleLoading.set(true);
+
+    setTimeout(() => {
+
+      this.googleLogin.emit();
+
+      this.isGoogleLoading.set(false);
+
+    }, 800)
   }
 }

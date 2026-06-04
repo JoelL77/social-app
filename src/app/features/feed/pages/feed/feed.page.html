@@ -17,16 +17,8 @@
       <div class="bg-white p-4 rounded-2xl shadow">
 
         <!-- POSTS -->
-        <app-post-card [post]="post"></app-post-card>
+        <app-post-card (eventToggleLike)="postsStore.toggleLike($event)" [post]="post"></app-post-card>
         <!-- POSTS -->
-
-        <!-- ACTIONS CREATE POST-->
-        <div class="flex gap-4 mb-4">
-          <button (click)="postsStore.toggleLike(post.id)">
-            ❤️ {{ post.likes }}
-          </button>
-        </div>
-        <!-- ACTIONS CREATE POST-->
 
         <!-- COMMENTS -->
         <div class="space-y-2">
