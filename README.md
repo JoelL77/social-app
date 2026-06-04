@@ -1,59 +1,205 @@
-# SocialApp
+# Social App - Angular 21.2.0 SSR
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.2.7.
+Aplicación web tipo red social desarrollada con Angular, Signals, SSR (Angular Universal) y Tailwind CSS.
 
-## Development server
+## Características
 
-To start a local development server, run:
+* Login con email y contraseña.
+* Login con Google (OAuth simulado).
+* Feed de publicaciones.
+* Creación de publicaciones.
+* Creación de comentarios.
+* Likes en publicaciones.
+* Persistencia de datos mediante LocalStorage.
+* Estado global utilizando Signals Store.
+* Renderizado del lado del servidor (SSR).
+* Diseño responsivo con Tailwind CSS.
+* Arquitectura basada en Standalone Components y Atomic Design.
+
+---
+
+## Tecnologías Utilizadas
+
+* Angular 21
+* TypeScript
+* Angular SSR (Universal)
+* Angular Signals
+* Tailwind CSS 4
+* LocalStorage
+
+---
+
+## Arquitectura
+
+La aplicación está organizada siguiendo una estructura basada en características (Feature-Based Architecture) y Atomic Design.
+
+### Atomic Design
+
+La aplicación utiliza una arquitectura basada en Features y Standalone Components.
+```
+app
+├── features
+│   ├── auth
+│   └── feed
+│
+├── shared
+│   └── interfaces
+```
+Cada feature encapsula sus propias:
+
+* Pages
+* Components
+* Store
+* Guards
+* Interfaces
+* Mock data
+* Aplicación de Atomic Design
+
+Si bien no se implementaron carpetas explícitas para Atoms, Molecules y Organisms, los componentes fueron diseñados siguiendo dichos principios:
+
+* Organisms
+* Navbar
+* Create Post
+* Post Card
+* Comments Form
+* Comments Item
+* Pages
+* Login Page
+* Feed Page
+
+Esta organización permite mantener componentes reutilizables, desacoplados y fáciles de escalar.
+
+### Estado Global
+
+Se utiliza Signals Store para gestionar:
+
+* Usuario autenticado.
+* Lista de publicaciones.
+* Lista de comentarios.
+* Persistencia local.
+
+---
+
+## Instalación
+
+Clonar el repositorio:
+
+```bash
+git clone <URL_DEL_REPOSITORIO>
+```
+
+Ingresar al proyecto:
+
+```bash
+cd social-app
+```
+
+Instalar dependencias:
+
+```bash
+npm install
+```
+
+---
+
+## Ejecución en modo Desarrollo
+
+```bash
+npm start
+```
+
+o
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+La aplicación estará disponible en:
 
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
+```text
+http://localhost:4200
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+---
+
+## Ejecución en modo SSR
+
+Iniciar la aplicación utilizando Angular SSR:
 
 ```bash
-ng generate --help
+npm run serve:ssr:social-app
 ```
 
-## Building
+La aplicación se ejecutará renderizando las páginas desde el servidor utilizando Angular Universal.
 
-To build the project run:
+---
+
+## Build SSR
+
+Generar la versión de producción:
 
 ```bash
-ng build
+npm run build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
-
-## Running unit tests
-
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+Generar específicamente la versión SSR:
 
 ```bash
-ng test
+npm run build:ssr
 ```
 
-## Running end-to-end tests
+---
 
-For end-to-end (e2e) testing, run:
+## Rutas con SSR
 
-```bash
-ng e2e
+La aplicación utiliza Angular Universal con el siguiente esquema:
+
+```ts
+export const serverRoutes: ServerRoute[] = [
+  {
+    path: '**',
+    renderMode: RenderMode.Server
+  }
+];
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+Por lo tanto, todas las rutas de la aplicación utilizan SSR:
 
-## Additional Resources
+| Ruta  | Renderizado |
+| ----- | ----------- |
+| /     | SSR         |
+| /feed | SSR         |
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Posteriormente Angular hidrata la aplicación y las interacciones continúan funcionando del lado del cliente (CSR).
+
+---
+
+## Persistencia
+
+La información se almacena localmente utilizando LocalStorage:
+
+* Usuario autenticado.
+* Publicaciones.
+* Comentarios.
+* Likes.
+
+No existe backend real para este desafío.
+
+---
+
+## OAuth Simulado
+
+Se implementó un flujo de autenticación simulado mediante un botón:
+
+* Login con Google
+
+Este flujo genera un usuario mockeado y actualiza el estado global de autenticación.
+
+---
+
+## Consideraciones
+
+* No se utiliza backend.
+* No se utiliza base de datos.
+* Prisma no es requerido ya que la aplicación no posee persistencia en servidor.
+* Los datos se mantienen únicamente en LocalStorage.
